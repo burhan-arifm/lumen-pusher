@@ -27,4 +27,4 @@ deploy:
   api_key: $heroku_api_key
   app: lumen-pusher
   on:
-    branch: master
+    branch: backend
