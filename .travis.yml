@@ -20,7 +20,7 @@ before_script:
   - php artisan migrate --seed --no-interaction -vvv
   - pear install pear/PHP_CodeSniffer
 script:
-  - vendor/bin/phpunit --coverage-text
+  - vendor/bin/phpunit --coverage-text --testdox --verbose
   - phpcs --ignore=app/Http/Controllers/Controller.php app/Http/Controllers
 deploy:
   provider: heroku
