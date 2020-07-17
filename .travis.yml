@@ -20,4 +20,4 @@ jobs:
           branch: backend
         run:
           - "cp .env.example .env"
-          - "php artisan migrate:fresh --seed "php artisan migrate:fresh --seed --force --verbose" --verbose"
+          - "php artisan migrate:fresh --seed --force --verbose"
