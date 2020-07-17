@@ -6,7 +6,6 @@ addons:
   apt:
     update: true
 before_install:
-  - echo "$pusher_key"
   - composer validate
 install:
   - composer install --no-interaction
@@ -18,3 +17,5 @@ deploy:
   app: lumen-pusher
   on:
     branch: backend
+  run:
+    - "php artisan migrate:fresh --seed"
