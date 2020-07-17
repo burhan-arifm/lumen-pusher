@@ -19,5 +19,6 @@ jobs:
         on:
           branch: backend
         run:
-          - "cp .env.example .env"
+          - "cp .env.example .env --verbose"
+          - "php artisan cache:clear --verbose"
           - "php artisan migrate:fresh --seed --force --verbose"
