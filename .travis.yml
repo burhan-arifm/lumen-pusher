@@ -1,7 +1,4 @@
 language: php
-php:
-  - '7.3'
-  - '7.4'
 addons:
   apt:
     update: true
@@ -11,11 +8,16 @@ install:
   - composer install --no-interaction
 script:
   - vendor/bin/phpunit --coverage-text --testdox --verbose
-deploy:
-  provider: heroku
-  api_key: $heroku_api_key
-  app: lumen-pusher
-  on:
-    branch: backend
-  run:
-    - "php artisan migrate:fresh --seed"
+jobs:
+  include:
+    - php: '7.3'
+    - php: '7.4'
+      deploy:
+        provider: heroku
+        api_key: $heroku_api_key
+        app: lumen-pusher
+        on:
+          branch: backend
+        run:
+          - "cp .env.example .env"
+          - "php artisan migrate:fresh --seed --verbose"
