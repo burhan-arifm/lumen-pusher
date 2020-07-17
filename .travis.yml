@@ -11,10 +11,10 @@ before_install:
 install:
   - composer install --no-interaction
 before_script:
-  - pear install pear/PHP_CodeSniffer
+  - composer require squizlabs/php_codesniffer --dev
 script:
   - vendor/bin/phpunit --coverage-text --testdox --verbose
-  - phpcs --ignore=app/Http/Controllers/Controller.php app/Http/Controllers
+  - vendor/bin/phpcs --ignore=app/Http/Controllers/Controller.php app/Http/Controllers
 deploy:
   provider: heroku
   api_key: $heroku_api_key
