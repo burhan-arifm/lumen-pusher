@@ -1,21 +1,74 @@
-# Lumen-Pusher [![Build Status](https://travis-ci.org/burhan-arifm/lumen-pusher.svg)](https://travis-ci.org/burhan-arifm/lumen-pusher) [![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Lumen-Pusher merupakan _web service_ sederhana berbasis JSON yang menggunakan _micro framework_ Lumen versi 7.2. aplikasi ini berfungsi semacam _database_ pengguna yang menyimpan nama, tanggal lahir, jenis kelamin, alamat, surel, dan pekerjaan. Selain itu, _web service_ ini juga memanfaatkan aplikasi pihak ketiga sebagai _server broadcasting_ Pusher yang berfungsi agar dapat memperbaharui tampilan di pengguna secara _real-time_.
+## Available Scripts
 
-## Apa itu Lumen?
-Lumen merupakan _micro framework_ yang dikembangkan oleh Taylor Otwell yang juga merupakan pengembang framework Laravel. _Framework_ ini menggunakan bahasa PHP. Secara dasar, Lumen adalah Laravel dengan ukuran yang lebih ringan, karena terdapat beberapa fitur Laravel yang tidak dibawa oleh Lumen. Karena itu, Lumen dapat berjalan lebih cepat daripada Laravel.
+In the project directory, you can run:
 
-## Spesifikasi kebutuhan
-Karena aplikasi ini menggunakan _micro framework_ Lumen versi 7.2, maka spesifikasinya mengikuti kebutuhan dari framework itu sendiri. Sila menuju ke laman dokumentasi resminya [di sini](https://lumen.laravel.com/docs/7.x).
+### `yarn start`
 
-## Cara menggunakan
-1. **_Clone_** repositori ini.
-2. Jalankan `composer install`.
-3. Jika pada folder tidak terdapat file **.env**, copy file **.env.example** di direktori yang sama kemudian ganti namanya menjadi **.env**.
-4. Sesuaikan dengan setup pada komputernya, mulai dari _database_, URL aplikasi, hingga layanan _broadcast_ yang digunakan.
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
+
+### `yarn test`
+
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `yarn build`
+
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 ## Ingin memodifikasi sesuai kebutuhan?
 Aplikasi ini menggunakan lisensi MIT. Apabila ingin memodifikasi aplikasinya, dipersilahkan. Adapun sebagai bantuan untuk memodifikasinya bisa menggunakan referensi-referensi berikut:
-1. [Dokumentasi resmi _micro framework_ Lumen](https://lumen.laravel.com/docs/7.x).
-2. [Tutorial menggunakan Pusher di framework Laravel](https://pusher.com/tutorials/realtime-table-laravel).
-3. [Tutorial menggunakan Pusher di framework Laravel (**Bahasa Indonesia**)](https://medium.com/@ranggaantok/laravel-pusher-real-time-notification-e8a0012a25c3).
+1. [Dokumentasi resmi _framework_ react.js](https://reactjs.org/docs).
+2. [Tutorial _framework_ react.js di BuildWith Angga (**Bahasa Indonesia**)](https://www.buildwithangga.com/kelas/react-javascript).
+3. [Tutorial menggunakan Pusher di _framework_ react.js dan express.js](https://pusher.com/tutorials/react-websockets).
