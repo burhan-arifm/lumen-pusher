@@ -1,23 +1,16 @@
 language: php
 php:
-  - '7.2'
   - '7.3'
   - '7.4'
-  - nightly
 addons:
-  postgresql: "10"
   apt:
     update: true
 before_install:
   - echo "$pusher_key"
-  - composer self-update
-  - composer --version
   - composer validate
 install:
   - composer install --no-interaction
 before_script:
-  - composer info
-  - php artisan migrate --seed --no-interaction -vvv
   - pear install pear/PHP_CodeSniffer
 script:
   - vendor/bin/phpunit --coverage-text --testdox --verbose
