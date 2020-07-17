@@ -1,24 +1,25 @@
-language: php
+dist: bionic
+language: node_js
 addons:
   apt:
     update: true
-before_install:
-  - composer validate
-install:
-  - composer install --no-interaction
+cache:
+  directories:
+  - node_modules
 script:
-  - vendor/bin/phpunit --coverage-text --testdox --verbose
+  - npm test
+  - npm run build
 jobs:
   include:
-    - php: '7.3'
-    - php: '7.4'
+    - node_js: '12'
+    - node_js: '13'
+    - node_js: '14'
+    - node_js: 'lts'
+    - node_js: 'stable'
       deploy:
-        provider: heroku
-        api_key: $heroku_api_key
-        app: lumen-pusher
+        provider: pages
+        skip_cleanup: true
+        github_token: $github_token
+        local_dir: build
         on:
-          branch: backend
-        run:
-          - "cp .env.example .env --verbose"
-          - "php artisan cache:clear --verbose"
-          - "php artisan migrate:fresh --seed --force --verbose"
+          branch: frontend
