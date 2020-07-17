@@ -6,9 +6,6 @@ addons:
 cache:
   directories:
   - node_modules
-script:
-  - npm test
-  - npm run build
 jobs:
   include:
     - node_js: '12'
@@ -16,6 +13,7 @@ jobs:
     - node_js: '14'
     - node_js: 'lts'
     - node_js: 'stable'
+      script: npm run build
       deploy:
         provider: pages
         skip_cleanup: true
